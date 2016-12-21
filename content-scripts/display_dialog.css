@@ -1,0 +1,24 @@
+.scepticism-box{
+  background: red;
+  position: fixed;
+  top: 2%;
+  width:90%;
+  left: 4%;
+  z-index: 9999999;
+  padding:20px;
+  border-radius: 10px;
+  border: 3px solid #aaa;
+}
+.scepticism-content{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.scepticism-close{
+  display: inline-block;
+  float: right;
+  color: black;
+  text-align: center;
+  font-size: 9px;
+}
