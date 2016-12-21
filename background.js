@@ -10,18 +10,17 @@ var sourceOne = {
   ]
 };
 
-
 function logURL(params) {
   //for each Entry in blacklist
   var result = sourceOne.blacklist.some( function(element){
       var tst = new RegExp(element);
       if( tst.test( params.url ) && params.frameId === 0){
-        browser.tabs.sendMessage(params.tabId, { message: sourceOne.message})
+        chrome.tabs.sendMessage(params.tabId, { message: sourceOne.message})
       }
   });
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(
+chrome.webNavigation.onDOMContentLoaded.addListener(
   logURL,
   {
     url: [

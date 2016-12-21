@@ -3,7 +3,7 @@ function closeDialog(){
   scepticism.parentNode.removeChild( scepticism );
 }
 
-browser.runtime.onMessage.addListener( (message) => {
+chrome.runtime.onMessage.addListener( (message) => {
   if (window.self === window.top) {
     var body = document.querySelector('body');
     var mainBox = document.createElement('div');
